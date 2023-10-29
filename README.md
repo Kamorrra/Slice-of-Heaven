@@ -115,56 +115,42 @@ CREATE TABLE `ingredients` (
     )
 );
 
-CREATE TABLE `recipe` (
-    `row_id` int  NOT NULL ,
-    `recipe_id` varchar(20)  NOT NULL ,
-    `ing_id` varchar(10)  NOT NULL ,
-    `quantity` int  NOT NULL ,
-    PRIMARY KEY (
-        `row_id`
-    )
-);
-
-CREATE TABLE `inventory` (
-    `inv_id` int  NOT NULL ,
-    `item_id` varchar(10)  NOT NULL ,
-    `quantity` int  NOT NULL ,
-    PRIMARY KEY (
-        `inv_id`
-    )
-);
-
-CREATE TABLE `rota` (
-    `row_id` int  NOT NULL ,
-    `rota_id` varchar(20)  NOT NULL ,
-    `date` datetime  NOT NULL ,
-    `shift_id` varchar(20)  NOT NULL ,
-    `staff_id` varchar(20)  NOT NULL ,
-    PRIMARY KEY (
-        `row_id`
-    )
-);
-
-CREATE TABLE `staff` (
-    `staff_id` varchar(20)  NOT NULL ,
-    `first_name` varchar(30)  NOT NULL ,
-    `last_name` varchar(30)  NOT NULL ,
-    `position` varchar(100)  NOT NULL ,
-    `hourly_rate` decimal(5,2)  NOT NULL ,
-    PRIMARY KEY (
-        `staff_id`
-    )
-);
-
-CREATE TABLE `shift` (
-    `shift_id` varchar(20)  NOT NULL ,
-    `day_of_week` varchar(20)  NOT NULL ,
-    `start_time` time  NOT NULL ,
-    `end_time` time  NOT NULL ,
-    PRIMARY KEY (
-        `shift_id`
-    )
-);
-
 ------------------------------
+
+**Business Task: Tracking Order Activity** 
+
+Per Shawn's request, we created a view in SQL that will track customer orders. These are the specific metrics we are targeting:
+
+1. Total Orders
+2. Total Sales
+3. Total Items
+4. Average Order Values
+5. Sales by Category
+6. Top Selling Items
+7. Orders by Hours
+8. Sales by Hour
+9. Orders by Address
+
+
+
+Below is the SQL query that accomplishes all of theses list items;
+
+**SELECT**
+
+o.order_id,
+i.item_price,
+o.quantity,
+i.item_cat,
+i.item_name,
+o.created_at,
+a.delivery_address1,
+a.delivery_address2,
+a.delivery_city,
+a.delivery_zipcode,
+o.delivery 
+
+**FROM** orders o
+
+**LEFT JOIN** items i **ON** o.item_id = i.item_id
+**LEFT JOIN** addresses a **ON** o.add_id = a.add_id
 
