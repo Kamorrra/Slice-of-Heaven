@@ -15,10 +15,7 @@ In this project we will be focusing on three main areas of the business
 
 **TOOLSET**
 
-- Quick DBD
-- Excel
-- SQL
-- Tableau
+`Quick DBD` `Excel` `SQL` `Tableau`
 
 ------------------------------
 
