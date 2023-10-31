@@ -52,7 +52,7 @@ What we are able to see is that some of the tables within the database have simi
 
 **Relational Database: SQL**
 
-Below is a sample of the MySQL syntax used to create the database and tables within it.
+Here is a sample of the MySQL syntax used to create the database and tables within it:
 
 CREATE DATABASE Pizza_DB;
 
@@ -133,7 +133,7 @@ Per Shawn's request, we created a view in SQL that will track customer orders. T
 
 
 
-Below is the SQL query that accomplishes all of theses list items;
+Here is the SQL query that accounts for all of these list items:
 
 **SELECT**
 
@@ -152,5 +152,6 @@ o.delivery
 **FROM** orders o
 
 **LEFT JOIN** items i **ON** o.item_id = i.item_id
+
 **LEFT JOIN** addresses a **ON** o.add_id = a.add_id
 
