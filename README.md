@@ -51,11 +51,11 @@ What we are able to see is that some of the tables within the database have simi
 
 Here is a sample of the MySQL syntax used to create the database and tables within it:
 
-CREATE DATABASE Pizza_DB;
+`CREATE DATABASE` Pizza_DB;
 
 USE Pizza_DB;
 
-CREATE TABLE `orders` (
+`CREATE TABLE` `orders` (
     `row_id` int  NOT NULL ,
     `order_id` int  NOT NULL ,
     `created_at` datetime  NOT NULL ,
@@ -69,7 +69,7 @@ CREATE TABLE `orders` (
     )
 );
 
-CREATE TABLE `customers` (
+`CREATE TABLE` `customers` (
     `cust_id` int  NOT NULL ,
     `cust_firstname` varchar(50)  NOT NULL ,
     `cust_lastname` varchar(50)  NOT NULL ,
@@ -78,7 +78,7 @@ CREATE TABLE `customers` (
     )
 );
 
-CREATE TABLE `address` (
+`CREATE TABLE` `address` (
     `address_id` int  NOT NULL ,
     `delivery_address1` varchar(200)  NOT NULL ,
     `delivery_address2` varchar(200)  NULL ,
@@ -89,7 +89,7 @@ CREATE TABLE `address` (
     )
 );
 
-CREATE TABLE `product` (
+`CREATE TABLE` `product` (
     `product_id` varchar(50)  NOT NULL ,
     `sku` varchar(100)  NOT NULL ,
     `item_name` varchar(50)  NOT NULL ,
@@ -101,7 +101,7 @@ CREATE TABLE `product` (
     )
 );
 
-CREATE TABLE `ingredients` (
+`CREATE TABLE` `ingredients` (
     `ing_id` varchar(10)  NOT NULL ,
     `ing_name` varchar(200)  NOT NULL ,
     `ing_weight` int  NOT NULL ,
